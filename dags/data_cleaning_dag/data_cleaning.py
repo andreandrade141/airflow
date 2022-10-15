@@ -11,7 +11,11 @@ dag_path = os.getcwd()
 
 
 def data_cleaning() -> None:
-    hotel_data = pd.read_csv()
+    '''
+        This method cleans up all empty cells, adding some placeholder value.
+
+    '''
+    hotel_data = pd.read_csv("raw_data/raw.csv")
     hotel_data.head()
     hotel_data.info()
     hotel_data.describe()
@@ -25,7 +29,7 @@ def data_cleaning() -> None:
 
     cleaned_data.info()
 
-    cleaned_data.to_csv("", index=False)
+    cleaned_data.to_csv("processed_data/output.csv", index=False)
 
 
 def cleaned_data_message() -> None:
